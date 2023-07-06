@@ -1,31 +1,31 @@
 # Test your FastAPI endpoints
 
-GET http://127.0.0.1:8000/
+GET http://127.0.0.1:9032/
 Accept: application/json
 
 ###
 
-GET http://127.0.0.1:8000/hello/User
+GET http://127.0.0.1:9032/hello/User
 Accept: application/json
 
 ###
 
-POST http://127.0.0.1:8000/inference
+POST http://127.0.0.1:9032/inference
 Accept: application/json
 Content-Type: application/json
 
 {
-  "item": "pizza"
+  "item": "¿Como se declara una variable en Java?"
 }
 
 ###
 
-POST http://127.0.0.1:8000/inference
+POST http://127.0.0.1:9032/inference
 Accept: application/json
 Content-Type: application/json
 
 {
-  "item": "hamburgesa"
+  "item": "¿Como se crea una clase en Java?"
 }
 
 

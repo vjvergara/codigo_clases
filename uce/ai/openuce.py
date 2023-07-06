@@ -1,12 +1,12 @@
 import openai
 from pydantic import BaseModel
 
-openai.organization = 'tu key empresa'
-openai.api_key = 'tu key personal'
+openai.organization = 'org-qvjzo6Cm1uTTyH9422nbtwUQ'
+openai.api_key = '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'
 
 
 class Document(BaseModel):
-    item: str = 'pizza'
+    item: str = 'Profesor'
 
 
 def process_inference(user_prompt) -> str:
@@ -14,15 +14,12 @@ def process_inference(user_prompt) -> str:
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": """Eres un chef que lista los ingredientes de los platillos que se te proporcionan.
+            {"role": "system", "content": """Eres un profesor de programación experto. Vas a resolver cualquier duda de forma facil de entender para tus estudiantes
         E.G
-        pan
-        Ingredientes:
-        arina
-        huevos
-        agua
-        azucar
-        ...
+        ¿Cuantos lenguajes de programación existen?
+        
+        Respuesta:
+        C, C++, Java, Python, JavaScript
         """},
             {"role": "user", "content": user_prompt}
         ]
